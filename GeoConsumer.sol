@@ -30,7 +30,7 @@ setPublicChainlinkToken();
 //here we initialize the oracle address and jobids
 oracle =  0xd5CEd81bcd8D8e06E6Ca67AB9988c92CA78EEfe6;
 jobId =  "ef0eef0ffec44dd5b87279434bb6f90b";
-//parameters initialized by the Shamba contracts tool
+//You can get these parameters from the Shamba contracts tool
 agg_x = "agg_mean";
 dataset_code = "COPERNICUS/S2_SR";
 selected_band = "NDVI";
@@ -40,10 +40,10 @@ end_date = "2021-10-31";
 geometry = "{'type':'FeatureCollection','features':[{'type':'Feature','properties':{},'geometry':{'type':'Polygon','coordinates':[[[19.51171875,4.214943141390651],[18.28125,-4.740675384778361],[26.894531249999996,-4.565473550710278],[27.24609375,1.2303741774326145],[19.51171875,4.214943141390651]]]}}]}";
 threshold = 1;
 
-//variable code block ends
+//initializing ends
 
 }
-//here we build the request
+//here we build the data request
 function requestGeospatialData()
 public
 onlyOwner
@@ -55,7 +55,7 @@ req.add("selected_band", selected_band);
 req.add("geometry", geometry);
 req.add("start_date", start_date);
 req.add("end_date", end_date);
-req.add("image_scale", uint2str(image_scale));
+req.add("image_scale", uint2str(image_scale));  //we convert image_scale from uint to string
 //Multiply the result by 1000000000000000000 to remove decimals
 //int timesAmount = 10**18;
 //req.addInt("times", timesAmount);
