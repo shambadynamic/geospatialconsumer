@@ -15,5 +15,7 @@ Inputs:
 
 Data response stored in the 'currentData' variable.
 
+Remember to fund your deployed contract with LINK in order to make data requests from oracles.
+
 For more information about the Shamba geospatial oracle visit: 
 https://docs.shamba.app
